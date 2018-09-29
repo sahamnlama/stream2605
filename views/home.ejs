@@ -3,15 +3,25 @@
   <head>
     <title></title>
 
+
   </head>
   <body>
     <h1>360Owl</h1>
-    <script src="a.js"></script>
-    <script src="b.js"></script>
+
+
     <video id="localStream" width="300" controls></video>
+    </br></br>
+    <label>My Connection Token</label>
+    <br/><br/>
+    <textarea rows="3" cols="100" id="txtMySignal"></textarea>
+    <br/><br/>
+    <input type="text" placeholder="Your friend's token" id="txtFriendSignal">
+    <br/><br/>
+    <button id="btnConnect">Connect</button>
   </body>
+
   <script>
-    navigator.mediaDevices.getUserMedia({audio:false, video:true})
+  /*  navigator.mediaDevices.getUserMedia({audio:false, video:true})
     .then(stream => {
       const video = document.getElementById('localStream');
       video.srcObject = stream;
@@ -20,5 +30,7 @@
       };
     })
     .catch(err => console.log(err));
+*/
   </script>
+  <script src="bundle.js"></script>
 </html>
